@@ -16,7 +16,11 @@ data<-read.csv("data.csv")
 #Show 1st 10 rows
 rows = 10
 data %>% 
-  tibble::as_tibble()
-  head(rows)
+  tibble::as_tibble() %>% 
+  head(rows) %>% 
+  str() %>% 
+  select(Gender,DOB,marital_status,population_type,PatientType,EntryPoint,DateEnrolledInHIVCare,date_confirmed_hiv_positive)
 
+
+  
 
